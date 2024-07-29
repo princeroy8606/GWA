@@ -12,7 +12,7 @@ function Schedule() {
         <div className="myschedule">
             <h2 className="schedule-title">My Schedule</h2>
             <div className="allandcal">
-                <dic className="calender">
+                <div className="calender">
                   {/* <div className='toolbar'>
                     <div className="todayandaddevent">
                       <button style={{color:"inherit"}}>Today</button>
@@ -39,7 +39,7 @@ function Schedule() {
                     </div>
                   </div> */}
                     <ReactBigCalendar></ReactBigCalendar>
-                </dic>
+                </div>
             </div>
             </div>
       </div>
