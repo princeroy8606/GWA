@@ -12,7 +12,7 @@
   width: 18rem;
   height: 90vh;
   background: rgb(253, 253, 253);
-  display: flex;
+  display: none;
   flex-direction: column;
   gap: 1rem;
   align-items: center;
@@ -27,9 +27,8 @@
 }
 
 .reviews-cnt {
-  width: calc(100% - 18rem);
+  width: 100%;
   height: calc(90 - 2rem);
-  padding-left: 3rem;
 }
 
 .demo-top-component {
@@ -64,16 +63,15 @@
 
 .review-card {
   display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
   justify-content: space-between;
-  align-items: center;
   width: 100%;
-  min-height: 10rem;
   border-radius: 1rem;
   background: #ffffff;
-  padding: 1.5rem 2rem;
+  padding: 1rem;
   box-shadow: 0px 4px 15px 0px #00000012;
   border: 1px solid;
-
   border-image-source: linear-gradient(
     180deg,
     rgba(213, 211, 211, 0) 91.99%,
@@ -82,16 +80,15 @@
 }
 
 .profile-info-cnt {
-  width: 20rem;
-  height: 100%;
+  width: 100%;
   display: flex;
   gap: 1rem;
   align-items: center;
 }
 
 .profile-img {
-  width: 5rem;
-  height: 80%;
+  width: 3rem;
+  height: 3rem;
   border-radius: 0.5rem;
   object-fit: cover;
   background: #9b9b9b;
@@ -106,21 +103,21 @@
 }
 
 .profile-name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 700;
   font-family: "Poppins", sans-serif;
   color: #2d3748;
 }
 
 .day {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
   color: #2d3748;
 }
 
 .time-info {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
   font-family: "Poppins", sans-serif;
   color: #a0aac8;
@@ -133,30 +130,85 @@
 }
 
 .icon-image {
-  width: 1rem;
-  height: 1rem;
+  width: 0.6rem;
+  height: 0.6rem;
   object-fit: contain;
 }
 
 .review-cnt {
-  width: 35rem;
-  height: 100%;
+  width: 100%;
+  height: fit-content;
   border-right: 1.5px solid #e7e7e7;
   border-left: 1.5px solid #e7e7e7;
-  padding: 0rem 1rem;
 }
 
 .review-text {
   text-align: justify;
 }
 .rating-cnt {
-  width: 16rem;
+  width: 100%;
 }
 .rating-start-cnt {
-  width: 80%;
+  width: fit-content;
   height: 3rem;
+  gap: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: auto;
+}
+
+@media (min-width: 700px) {
+  .review-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 10rem;
+    padding: 1.5rem 2rem;
+    gap: 0;
+  }
+
+  .profile-info-cnt {
+    width: 20rem;
+    height: 100%;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .profile-name {
+    font-size: 20px;
+  }
+
+  .profile-img {
+    width: 5rem;
+    height: 80%;
+  }
+
+  .day .time-info {
+    font-size: 14px;
+  }
+
+  .review-cnt {
+    width: 35rem;
+    padding: 0rem 1rem;
+  }
+
+  .rating-cnt {
+    width: 16rem;
+  }
+
+  .icon-image {
+    width: 1rem;
+    height: 1rem;
+  }
+}
+@media (min-width: 1000px) {
+  .demo-sidebar {
+    display: flex;
+  }
+  .review-cnt {
+    width: calc(100% - 18rem);
+    padding-left: 3rem;
+  }
 }
